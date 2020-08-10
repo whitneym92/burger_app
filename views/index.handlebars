@@ -1,0 +1,43 @@
+<img src="/assets/eatMe.png"/>
+<h1>Lets Eat Some Burgers</h1>
+
+<div class="row">
+    <div class="col-md-6">
+        <ul id="uneatenBurgers">
+            <h3>Burgers to Devour</h3>
+        {{#each burgers}}
+            {{#unless devoured}}
+            <li class="uneaten">
+                <p>{{burger_name}}</p>
+                <button class="devour" data-id="{{id}}">
+                    Devour..
+                </button>
+            </li>
+            {{/unless}}
+        {{/each}}
+        </ul>
+    </div>
+
+    <div class="col-md-6">
+        <ul id="devouredBurgers">
+            <h3>Devoured Burgers</h3>
+        {{#each burgers}}
+            {{#if devoured}}
+            <li class="devoured">
+                {{burger_name}}
+            {{/if}}
+            </li>
+        {{/each}}
+        </ul>
+    </div>
+</div>
+
+<h2>Add a Burger:</h2>
+<form class="create-form clearfix">
+    <div class="form-group">
+        <input type=text id="newBurger" name="name">
+        <button type="submit">Submit!</button>
+    </div>
+</form>
+
+
