@@ -17,7 +17,7 @@ A Heroku app that utilizes MySQL and Handlebars to make a list of burgers to be 
 [Questions](#Questions)
   
 ## Demo
-![Demo](/assets/demo.gif)
+![Demo](/public/assets/demo.gif)
 
   
 ## Usage
