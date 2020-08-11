@@ -80,19 +80,6 @@ var orm = {
 
       cb(result);
     });
-  },
-  delete: (table, condition, cb) => {
-    var queryString = "DELETE FROM " + table;
-    queryString += " WHERE ";
-    queryString += condition;
-
-    connection.query(queryString, (err, result) => {
-      if (err) {
-        throw err;
-      }
-
-      cb(result);
-    });
   }
 };
 
